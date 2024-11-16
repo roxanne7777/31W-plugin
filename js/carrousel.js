@@ -44,20 +44,14 @@
 
     radio.addEventListener("click", function() {
       indexCourant = i;
-      remplirCarrousel();
+      if (carrousel__figure.innerHTML === "") {
+        remplirCarrousel();
+      }
       afficheImage(indexCourant);
       carrousel.classList.add("carrousel--ouvrir");
+      console.log("ouvrir");
     });
   }
-
-  carrousel__bouton.addEventListener("click", function () {
-    if (carrousel__figure.innerHTML === "") {
-      remplirCarrousel();
-    }
-    afficheImage(indexCourant);
-    carrousel.classList.add("carrousel--ouvrir");
-    console.log("ouvrir");
-  });
 
   carrousel__x.addEventListener("click", function () {
     carrousel.classList.remove("carrousel--ouvrir");
