@@ -11,8 +11,11 @@
   let indexCourant = 0;
   /*
   */
-  
   console.log(galerie__img.length);
+
+  galerie__img.forEach((imageElement, index) => {
+    creerRadio(index, imageElement);
+  });
 
   function remplirCarrousel() {
     galerie__img.forEach((element, index) => {
@@ -29,11 +32,22 @@
      * @param {
      * } i 
      * 
-    */
-  /*
-  function creerRadio(i) {
-    
-  }*/
+  */
+  function creerRadio(i, image) {
+    let radio = document.createElement("input");
+    radio.type = "radio";
+    radio.name = "galerie-radio";
+    radio.classList.add("galerie__radio");
+    radio.setAttribute("data-index", i);
+
+    image.parentNode.insertBefore(radio, image.nextSibling);
+
+    radio.addEventListener("click", function() {
+      indexCourant = i;
+      afficheImage(indexCourant);
+      carrousel.classList.add("carrousel--ouvrir");
+    });
+  }
 
   carrousel__bouton.addEventListener("click", function () {
     if (carrousel__figure.innerHTML === "") {
