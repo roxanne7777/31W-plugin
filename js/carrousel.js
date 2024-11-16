@@ -44,6 +44,7 @@
 
     radio.addEventListener("click", function() {
       indexCourant = i;
+      remplirCarrousel();
       afficheImage(indexCourant);
       carrousel.classList.add("carrousel--ouvrir");
     });
