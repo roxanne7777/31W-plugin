@@ -15,9 +15,16 @@
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 2em;
-  cursor: pointer;
   z-index: 12;
+}
+
+.carrousel__x,
+.carrousel__gauche,
+.carrousel__droite {
+    background-color: lemonchiffon;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 .carrousel--ouvrir {
