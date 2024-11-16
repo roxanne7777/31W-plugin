@@ -1,10 +1,8 @@
 (function(){
   console.log("Vive Javascript");
   let carrousel = document.querySelector(".carrousel");
-  let carrousel__bouton = document.querySelector(".carrousel__bouton");
   let carrousel__x = document.querySelector(".carrousel__x");
   let carrousel__figure = document.querySelector(".carrousel__figure");
-  let galerie = document.querySelector(".galerie");
   let galerie__img = document.querySelectorAll(".galerie img");
   let carrousel__gauche = document.querySelector(".carrousel__gauche");
   let carrousel__droite = document.querySelector(".carrousel__droite");
