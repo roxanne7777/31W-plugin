@@ -11,5 +11,5 @@
 
 3. Déployer le projet sur le serveur Web Hosting Canada (WHC).
 
-Auteure: Roxanne Auclair\  
+Auteure: Roxanne Auclair  
 adresse whc: https://gftnth00.mywhc.ca/31w01/
