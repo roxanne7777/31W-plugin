@@ -26,3 +26,14 @@ function charger_scripts_css(){
     )  ;
 }
 add_action('wp_enqueue_scripts', 'charger_scripts_css');
+
+function genere_boutons() {
+    $categories = get_categories();
+    foreach($categories as $elm){
+        $nom = $elm->name;
+        $id = $elm->term_id;
+        $contenu .= '<button data-id="$id">$nom</button>';
+    }
+    return '<div class="filtre__bouton">$contenu</div>';
+}
+add_shortcode('extraire_cours', 'genere_boutons');
